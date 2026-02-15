@@ -37,7 +37,7 @@ export default function App() {
   // ✅ SUBMIT SENSOR DATA
   const submitSensor = async () => {
     try {
-      await axios.post("http://127.0.0.1:3000/api/sensor/add",
+      await axios.post("https://ayira-backend.onrender.com/api/sensor/add",
         Object.fromEntries(
           Object.entries(form).map(([k, v]) => [k, Number(v)])
         )
@@ -57,12 +57,12 @@ export default function App() {
     setLoading(true);
     try {
 
-      const res = await axios.post("http://127.0.0.1:3000/api/reports/daily");
+      const res = await axios.post("https://ayira-backend.onrender.com/api/reports/daily");
 
       setMessage(res.data.summary);
       setIsError(false);
 
-      const all = await axios.get("http://127.0.0.1:3000/api/reports/all");
+      const all = await axios.get("https://ayira-backend.onrender.com/api/reports/all");
       setReports(all.data);
 
     } catch {
