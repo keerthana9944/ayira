@@ -1,0 +1,202 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+  background: #f4f6fb;
+  color: #1a1a1a;
+}
+
+/* OUTER WRAPPER */
+.app{
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+}
+
+/* MAIN CONTAINER */
+.container{
+  width: 100%;
+  max-width: 1100px;
+}
+
+/* TITLE */
+.titleBlock{
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.titleBlock h1{
+  margin-bottom: 8px;
+  color: #111;
+}
+
+.titleBlock p{
+  color: #666;
+  font-size: 16px;
+}
+
+/* SECTION TITLE */
+.sectionTitle{
+  margin: 25px auto 15px;
+  font-size: 18px;
+  color: #333;
+  max-width: 950px;
+}
+
+/* GRID WRAPPER (THIS CENTERS YOUR FORM VISUALLY) */
+.inputGrid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+
+  width: 100%;
+  max-width: 950px;
+  margin: 0 auto 20px;
+}
+
+/* INPUT BOX */
+.inputBox{
+  background: #f9fafc;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #e3e6ee;
+  display: flex;
+  flex-direction: column;
+}
+
+.inputBox label{
+  font-size: 13px;
+  margin-bottom: 5px;
+  color: #444;
+}
+
+input{
+  width: 100%;
+  padding: 8px;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #111;
+  font-size: 14px;
+}
+
+/* BUTTON ROW */
+.buttonRow{
+  max-width: 950px;
+  margin: 25px auto 0;
+  display: flex;
+  gap: 20px;
+}
+
+.buttonRow button{
+  flex: 1;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.2s;
+}
+
+/* SECONDARY BUTTON */
+.secondaryBtn{
+  background: white;
+  border: 2px solid #00bfa6;
+  color: #00bfa6;
+}
+
+.secondaryBtn:hover{
+  background: #00bfa6;
+  color: white;
+}
+
+/* PRIMARY BUTTON */
+.primaryBtn{
+  background: #00bfa6;
+  color: white;
+  border: none;
+}
+
+.primaryBtn:hover{
+  background: #009e8e;
+}
+
+button:disabled{
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* MESSAGE BOXES */
+.successBox,
+.errorBox{
+  max-width: 950px;
+  margin: 20px auto 0;
+  padding: 12px;
+  border-radius: 8px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.successBox{
+  background: #e8f8f1;
+  color: #1b5e20;
+  border: 1px solid #4caf50;
+}
+
+.errorBox{
+  background: #fdecea;
+  color: #b71c1c;
+  border: 1px solid #e53935;
+}
+
+/* REPORT CARDS */
+.reportCard{
+  max-width: 950px;
+  margin: 15px auto 0;
+  padding: 14px;
+  border-radius: 10px;
+  background: #ffffff;
+  border: 1px solid #e3e6ee;
+}
+
+.reportCard small{
+  color: #888;
+}
+
+.reportCard p{
+  margin-top: 6px;
+}
+
+/* FADE ANIMATION */
+@keyframes fadeIn{
+  from{
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE */
+@media(max-width: 900px){
+
+  .inputGrid{
+    grid-template-columns: 1fr;
+  }
+
+  .buttonRow{
+    flex-direction: column;
+  }
+}
+
+.contentWrapper{
+  width: 100%;
+  max-width: 950px;
+  margin: 0 auto;
+}
