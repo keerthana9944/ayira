@@ -7,7 +7,10 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // path to database
-const dbPath = path.join(process.cwd(), "src", "database", "ayira.db");
+const dbPath = 
+  process.env.RENDER
+    ? "/data/ayira.db"
+    : path.join(process.cwd(), "src", "database", "ayira.db");
 
 const db = new sqlite3.Database(dbPath, (err) => {
     if(err){
